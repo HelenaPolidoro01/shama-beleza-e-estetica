@@ -541,24 +541,3 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-  .services-home {
-    grid-template-columns: 1fr; /* Um card por linha */
-  }
-
-  .home {
-    height: 150px; /* Ajusta altura dos cards */
-  }
-
-  .home img {
-    height: 100px; /* Ajusta altura da imagem */
-  }
-
-  .overlay p {
-    font-size: 12px; /* Reduz o texto para caber melhor */
-  }
-
-  .overlay a {
-    font-size: 12px; /* Ajusta o tamanho do link */
-  }
-}
