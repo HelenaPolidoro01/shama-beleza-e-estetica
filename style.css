@@ -457,31 +457,47 @@ footer {
         width: 100%;
         display: block;
     }
+    /*servicos*/
 
-    section.servicos {
-        grid-template-columns: 1fr 1fr; 
-        gap: 30px; 
-    }
-    .servicos-itens {
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
+   .container_s {
+        width: 100%;
+        padding: 10px;
+      }
+    
+      section.servicos {
+        grid-template-columns: 1fr; /* Empilhar os cards */
+        gap: 15px; /* Reduzir o espaço entre os itens */
+      }
+    
+      .servicos-itens {
+        padding: 10px; /* Diminuir o espaçamento interno */
+        width: 90%; /* Reduzir a largura total */
+        margin: 0 auto; /* Centralizar os itens */
+        font-size: 14px; /* Reduzir tamanho da fonte */
+      }
+    
+      .imagem-servico {
+        height: 120px; 
+      }
+    
+      .imagem-servico img {
+        height: 100%; 
+        border-radius: 8px;
+      }
+    
+      .servicos-itens h3 {
+        font-size: 16px; 
+        margin-top: 10px;
+      }
+    
+      .servicos-itens p {
+        font-size: 13px; 
+      }
+    
+      .servicos-itens a {
+        font-size: 14px;
+      }
 
-    .imagem-servico {
-        height: 150px; 
-    }
-
-    .servicos-itens h3 {
-        font-size: 13px;
-     
-    }
-
-    .servicos-itens p {
-        display: none;
-    }
 
     /*portfolio*/
     .portfolio-item {
