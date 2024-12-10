@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Lemon&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="IMG/logo.png">
+    <title>Micropigmentação - Shamá Beleza e Estética</title>
+
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+
+    .center {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header {
+        background-color: #1c1b1b;
+        padding: 2px 0;
+        border-bottom: 1px solid rgb(200, 200, 200);
+    }
+
+    .logo img {
+        width: 150px;
+        margin-top: 15px;
+    }
+
+
+    .menu {
+        width: 80%;
+        text-align: right;
+    }
+
+    .menu a {
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 15px;
+        margin-right: 10px;
+        transition: 0.3s;
+        margin-top: 25px;
+    }
+
+    .menu a:hover {
+        color: #666565;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+        /*
+    section service
+    */
+
+    section.service {
+        padding: 100px 0;
+        background-position: center;
+        text-align: center;
+    }
+
+    .service_ap {
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .service_ap img {
+        width: 400px;
+        border-radius: 5px;
+        margin-top: -20px;
+        float: right;
+        
+    }
+
+    .service_ap h2 {
+        color: #1c1b1b;
+        font-size: 25px;
+    }
+
+    .service_ap p {
+        color: #1c1b1b;
+        font-size: 19px;
+        margin: 10px 0;
+        width: 50%;
+        text-align: justify;
+    }
+
+    /**section portfolio**/
+
+    section.portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 60px;
+    }
+
+    .portfolio-item {
+        width: calc(20% - 20px);
+        margin: 10px;
+        overflow: hidden;
+        border-radius: 3px;
+        transition: transform 0.3s ease;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .portfolio-item:hover {
+        transform: translateY(-5px);
+    }
+
+    /** Section botao **/
+
+    section.botao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+       
+
+    }
+    .botao a{
+        text-decoration: none;
+        color: #1d1b1b;
+    }
+
+    button {
+        background: #ababab;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        transition: transform 0.3s; 
+    }
+    button:hover {
+        transform: scale(1.05); /* Aumenta ligeiramente o botão */
+    }
+
+        /**
+    footer
+    **/
+
+    footer {
+        background-color: #1c1b1b;
+        color: #fff;
+        padding: 50px;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .logo img {
+        margin-bottom: 30px;
+        width: 180px;
+    }
+
+    .itens a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+    .itens i {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .itens {
+        margin: 0 20px;
+        text-align: left;
+    }
+
+    .itens h2 {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    .itens p {
+        font-size: 16px;
+        color: #ccc;
+        margin-bottom: 10px;
+    }
+
+    .itens a i.fa-instagram {
+        background: linear-gradient(to right, #ffffff, #cc00ff, #ffa200);
+    }
+
+    .itens a i.fa-whatsapp {
+        color: #25D366;
+    }
+
+    .itens a:hover {
+        color: #ababab;
+    }
+
+    .copyright {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+    iframe {
+    max-width: 100%;
+    height: auto;
+    }
+
+    /*Responsivel*/
+    @media screen and (max-width: 768px) {
+    /*Header*/
+    .center {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo  img{
+        margin-bottom: 20px;
+    }
+    .menu {
+        width: 100%;
+        text-align: center;
+    }
+    .menu a {
+        margin-right: 10px;
+    }
+
+     /* Section service */
+    
+    .service_ap {
+        width: 100%;
+    }
+    .service_ap img {
+        width: 70%;
+        margin: 0 15%;
+        margin-bottom: 15px;
+
+    }
+    .service_ap h2 {
+       text-align: center;
+       
+    }
+    .service_ap p {
+        width: 90%;
+        margin: 20px;
+        font-size: 16px;
+        
+    }
+
+     /**section portfolio**/
+    section.portfolio{
+        display: none;
+    }
+
+     /*footer*/
+     footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .itens {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    /*Header menu */
+    header {
+        padding: 10px;
+    }
+    .logo h2 {
+        font-size: 18px;
+    }
+    .logo p {
+        font-size: 12px;
+    }
+    .menu a {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+     /* Footer */
+     footer {
+        padding: 30px 20px;
+    }
+    .logo h2 {
+        font-size: 20px;
+    }
+    .itens h2 {
+        font-size: 16px;
+    }
+    .redes-sociais a {
+        font-size: 16px;
+    }
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <div class="logo">
+                <img src="IMG/logo_fr.png" alt="logo">
+            </div>
+            <!--logo-->
+            <div class="menu">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="time.html">
+                    Nosso Time
+                </a>
+               
+                <a href="cursos.html">
+                    Cursos
+                </a>
+                <a href="#">
+                    Espaço
+                </a>
+            </div>
+            <!--menu-->
+        </header>
+
+            <section class="service">
+                <div class="service_ap">
+                    <a href="https://www.instagram.com/p/C2e4R_0uRcs/?igsh=OG1jZnk2dTliejJo"><img src="IMG/microl.png"></a>
+                    <h2>Micropigmentação Labial</h2>
+                    <p>É um procedimento estético que realça a cor e o contorno dos lábios, tornando-os mais definidos e simétricos. Usando pigmentos aplicados com uma agulha fina, corrige a coloração natural e proporciona uma aparência vibrante e duradoura, reduzindo a necessidade de batom.</p>
+                </div>
+            </section>
+        
+            <section class="portfolio">
+
+                <div class="portfolio-item">
+                    <a href="https://www.instagram.com/p/C8hBf-EOwYI/?igsh=MTl6N2NwcHNwdTNlcg%3D%3D"><img src="IMG/microl1.png" alt="Foto 1"></a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://www.instagram.com/p/C8VFc22OcxI/?igsh=NmNpMG81YjhjMXhp"><img src="IMG/microl2.png" alt="Foto 2"> </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://www.instagram.com/p/C3n0wUaOSqc/?igsh=MTZ0Mm5ibWxhcG54aA%3D%3D"><img src="IMG/microl3.png" alt="Foto 3"></a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://www.instagram.com/p/C0T1_htOTyz/?igsh=MnZrNzViYjJ2M2kx"><img src="IMG/microl4.png" alt="Foto 4"> </a>
+                </div>
+                <div class="portfolio-item">
+                   <a href="https://www.instagram.com/p/Cz8v7vqus15/?igsh=MXB4NzltcDNnNmJmcw%3D%3D"> <img src="IMG/microl5.png" alt="Foto 5"></a>
+                </div>
+            </section>
+
+            <section class="botao">
+            <button> 
+               <a href="https://api.whatsapp.com/send?phone=5514997289970&text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre:">Mais informações</a>
+            </button>
+        </section>
+
+            <footer>
+                <div class="logo">
+                   <img src="IMG/logo_fr.png" alt="logo">
+                </div>
+        
+                <br>
+                <div class="itens">
+                    <h2>Contato</h2>
+                    <a href="https://www.instagram.com/shamasalao_/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    <br><a href="https://api.whatsapp.com/send?phone=5514997289970&text=Ol%C3%A1,%20vim%20pelo%20site,%20meu%20nome%20%C3%A9:%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seguinte%20procedimento:%20"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+                </div>
+        
+                <div class="itens">
+                    <h2>Horário de Funcionamento</h2>
+                    <p>Ter.a Sex.: 8h - 20h</p>
+                    <p>Sábado: 8h - 19h</p>
+                </div>
+        
+                <div class="itens">
+                    <h2>Localização</h2>
+                    <p>Av. Santo Antonio 1179, Marília-SP</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3538582638923!2d-50.93421778561834!3d-23.21859468486071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c2cd62a0d92997%3A0x5369e2db5a1210!2sAv.%20Santo%20Antonio%2C%201179%20-%20Marília%2C%20SP%2C%2017500-001%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1625217158742!5m2!1spt-BR!2sus"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </footer>
+        
+            <div class="copyright">
+                <p>© 2024 Shamá Beleza e Estética - SALÃO - Todos os direitos reservados.</p>
+            </div>
+        
+</body>
+
+</html>
