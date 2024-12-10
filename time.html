@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Lemon&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="IMG/logo.png">
+    <title> Nosso Time - Shamá</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .center {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header {
+            background-color: #1c1b1b;
+            padding: 2px 0;
+            border-bottom: 1px solid rgb(200, 200, 200);
+        }
+
+        .logo img {
+            width: 150px;
+            margin-top: 15px;
+        }
+
+
+        .menu {
+            width: 80%;
+            text-align: right;
+        }
+
+        .menu a {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 15px;
+            margin-right: 10px;
+            transition: 0.3s;
+            margin-top: 25px;
+        }
+
+        .menu a:hover {
+            color: #666565;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /*
+              section main
+             */
+        
+        section.main {
+            background-image: url(IMG/salão2.png);
+            padding: 30px 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .main_cta {
+            width: 100%;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .main_cta h2 {
+            color: #fff;
+            font-size: 30px;
+        }
+        .main_cta p {
+            color: #fff;
+            font-size: 19px;
+            margin: 10px 0;
+        }
+
+        /** Section Time**/
+        
+        section.time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            margin: 40px;
+        }
+        
+        .profile img {
+            border-radius: 60px 0px;
+            width: 200px;
+            height: 370px;
+            object-fit: cover;
+            margin-right: 40px;
+        }
+        
+        .profile h1 {
+            color: #1c1b1b;
+            font-size: 20px;
+            margin: 0;
+        }
+        
+        .profile p {
+            color: #666;
+            font-size: 17px;
+        }
+        
+        .profile-text {
+            max-width: 700px;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: #1c1b1b;
+            margin: 0 15px;
+            font-size: 2.5em;
+            text-decoration: none;
+        }
+        
+        .social-icons a:hover {
+            color: #492f10b2;
+        }
+        /*footer*/
+        footer {
+        background-color: #1c1b1b;
+        color: #fff;
+        padding: 50px;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        }
+
+        .logo img {
+            margin-bottom: 30px;
+            width: 180px;
+        }
+
+        .itens a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .itens i {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .itens {
+            margin: 0 20px;
+            text-align: left;
+        }
+
+        .itens h2 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .itens p {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .itens a i.fa-instagram {
+            background: linear-gradient(to right, #ffffff, #cc00ff, #ffa200);
+        }
+
+        .itens a i.fa-whatsapp {
+            color: #25D366;
+        }
+
+        .itens a:hover {
+            color: #ababab;
+        }
+
+        .copyright {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+    
+        @media (max-width: 768px) {
+        .center {
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo  img{
+            margin-bottom: 20px;
+        }
+        .menu {
+            width: 100%;
+            text-align: center;
+        }
+        .menu a {
+            margin-right: 10px;
+        }
+
+        /*Section Time */
+        .profile {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .profile img {
+            margin: 0 20px 20px 0;
+            width: 100%;
+            max-width: 150px;
+            height: 300px;
+        }
+
+        .profile-text {
+            max-width: 400px;
+            text-align: center;
+            align-items: center;
+        }
+        .profile h1 {
+            text-align: center;
+            }
+        
+
+        .social-icons {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /*footer*/
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+        .itens {
+            flex: 1 1 100%;
+            margin: 10px 0;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+        @media screen and (max-width: 480px) {
+        header {
+            padding: 10px;
+        }
+    
+        .menu a {
+            font-size: 13px;
+            margin-right: 5px;
+        }
+        /* section main */
+        .main_cta {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .main_cta h2 {
+            font-size: 24px;
+        }
+        .main_cta p {
+        font-size: 15px;
+        }
+        section.main {
+            background-attachment: scroll;
+        }
+        /* Footer */
+        footer {
+            padding: 30px 20px;
+        }
+        .logo h2 {
+            font-size: 20px;
+        }
+        .itens h2 {
+            font-size: 16px;
+        }
+        .redes-sociais a {
+            font-size: 16px;
+        }
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="center">
+            <div class="logo">
+                <img src="IMG/logo_fr.png" alt="logo">
+            </div>
+            <!--logo-->
+            <div class="menu">
+                <a href="index.html">
+                    Home
+                </a>
+                
+                <a href="servicos.html">
+                    Serviços
+                </a>
+                <a href="curso.html">
+                    Cursos
+                </a>
+                <a href="espaco.html">
+                    Espaço
+                </a>
+            </div>
+            <!--menu-->
+
+        </div>
+        <!--center-->
+    </header>
+
+    <section class="main">
+        <div class="center">
+            <div class="main_cta">
+                <h2>Nosso Time</h2>
+                <p>Conte com nosso time de especialistas para cuidar de você!</p>
+
+            </div>
+            <!--main-cta-->
+        </div>
+        <!--center-->
+    </section>
+
+    <section class="time">
+        <div class="profile">
+            <img src="IMG/camila.png">
+            <div class="profile-text ">
+                <h1>Muito Prazer,<br>Sou Camila Rebeca.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, minus neque numquam temporibus suscipit deserunt qui debitis omnis accusantium! Fuga ea assumenda consequuntur perspiciatis repellendus. Laborum est dolorem esse porro.</p>
+        
+                <div class="social-icons ">
+                    <a href="https://www.instagram.com/camilarebeca_/ "><i class="fab fa-instagram "></i></a>
+                    <a href="#"> <i class="fa-solid fa-list"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="IMG/renata.png">
+            <div class="profile-text ">
+                <h1>Muito Prazer,<br>Sou Renata Veiga.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, minus neque numquam temporibus suscipit deserunt qui debitis omnis accusantium! Fuga ea assumenda consequuntur perspiciatis repellendus. Laborum est dolorem esse porro.</p>
+        
+                <div class="social-icons ">
+                    <a href="https://www.instagram.com/renataveiga.lashes/ "><i class="fab fa-instagram "></i></a>
+                    <a href="#"> <i class="fa-solid fa-list"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="IMG/beatriz.png">
+            <div class="profile-text ">
+                <h1>Muito Prazer,<br>Sou Beatriz Dutra.</h1>
+                <p>Maquiadora profissional, atuo na área da beleza há mais de 2 anos. Desde criança fui apaixonada por maquiagem, e sempre digo que a profissão que me escolheu. Meu objetivo é mostrar que a maquiagem não é apenas uma maquiagem, e que ela trás segurança, autoestima elevada, autoconfiança, além de realçar o que você já é! Sou muito feliz com minha profissão e busco sempre apriomorar e entregar o meu melhor.</p>
+        
+                <div class="social-icons ">
+                    <a href="https://www.instagram.com/beatrizdutrabeauty/ "><i class="fab fa-instagram "></i></a>
+                    <a href="#"> <i class="fa-solid fa-list"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="IMG/marli.png">
+            <div class="profile-text ">
+                <h1>Muito Prazer,<br>Sou Marli Marcelino.</h1>
+                <p>Há 30 anos na área, construí minha trajetória com foco em tratamentos capilares, colometria, penteados e especialização em cortes. Amo meu trabalho porque ele me permite criar, transformar e ressaltar a beleza única de cada pessoa, sempre com dedicação e carinho.</p>
+        
+                <div class="social-icons ">
+                    <a href="https://www.instagram.com/marcelinomarli_/ "><i class="fab fa-instagram "></i></a>
+                    <a href="#"> <i class="fa-solid fa-list"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="IMG/deise.png">
+            <div class="profile-text ">
+                <h1>Muito Prazer,<br>Sou Deise Fernandes</h1>
+                <p>Trabalho há 16 anos na área de estética como depiladora e esteticista facial e corporal. Assim que me formei, já iniciei minha jornada nesse campo, que me encanta a cada dia. Amo o que faço, pois acredito que cuidar das pessoas é uma forma de elevar sua autoestima e bem-estar, além de poder contribuir para momentos de autoconfiança e beleza.</p>
+        
+                <div class="social-icons ">
+                    <a href="https://www.instagram.com/deferodrigues/"><i class="fab fa-instagram "></i></a>
+                    <a href="#"> <i class="fa-solid fa-list"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="IMG/vitoria.png">
+            <div class="profile-text ">
+                <h1>Muito Prazer,<br>Sou Vitoria Marcelino.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, minus neque numquam temporibus suscipit deserunt qui debitis omnis accusantium! Fuga ea assumenda consequuntur perspiciatis repellendus. Laborum est dolorem esse porro.</p>
+         
+                <div class="social-icons ">
+
+                    <a href="https://www.instagram.com/vitoriaomarcelino/"><i class="fab fa-instagram "></i></a>
+                    <a href="#"> <i class="fa-solid fa-list"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">
+            <img src="IMG/logo_fr.png" alt="logo">
+        </div>
+
+        <br>
+        <div class="itens">
+            <h2>Contato</h2>
+            <a href="https://www.instagram.com/shamasalao_/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <br><a href="https://api.whatsapp.com/send?phone=5514997289970&text=Ol%C3%A1,%20vim%20pelo%20site,%20meu%20nome%20%C3%A9:%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seguinte%20procedimento:%20"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+        </div>
+
+        <div class="itens">
+            <h2>Horário de Funcionamento</h2>
+            <p>Ter.a Sex.: 8h - 20h</p>
+            <p>Sábado: 8h - 19h</p>
+        </div>
+
+        <div class="itens">
+            <h2>Localização</h2>
+            <p>Av. Santo Antonio 1179, Marília-SP</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3538582638923!2d-50.93421778561834!3d-23.21859468486071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c2cd62a0d92997%3A0x5369e2db5a1210!2sAv.%20Santo%20Antonio%2C%201179%20-%20Marília%2C%20SP%2C%2017500-001%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1625217158742!5m2!1spt-BR!2sus"
+                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>© 2024 Shamá Beleza e Estética - SALÃO - Todos os direitos reservados.</p>
+    </div>
+
+
+</body>
+
+</html>

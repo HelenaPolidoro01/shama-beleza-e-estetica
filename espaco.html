@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Lemon&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="IMG/logo.png">
+    <title>Nosso espaço - Shamá Beleza e Estética</title>
+
+    <style>
+        body {
+           margin: 0;
+           padding: 0;
+           font-family: "Poppins", sans-serif;
+           background-color: #fff;
+       }
+       
+       .center {
+           max-width: 1100px;
+           margin: 0 auto;
+           padding: 0 2%;
+           display: flex;
+           flex-wrap: wrap;
+       }
+       
+       header {
+           background-color: #1c1b1b;
+           padding: 10px 0;
+           border-bottom: 1px solid rgb(200, 200, 200);
+       }
+       
+       .logo img {
+           width: 150px;
+           margin-top: 15px;
+       }
+       
+       .menu {
+           width: 80%;
+           text-align: right;
+       }
+       
+       .menu a {
+           color: #fff;
+           font-size: 16px;
+           text-decoration: none;
+           display: inline-block;
+           padding: 10px 15px;
+           margin-right: 10px;
+           transition: 0.3s;
+           margin-top: 25px;
+       }
+       
+       .menu a:hover {
+           color: #666565;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
+       /*
+        section main
+        */
+       
+       section.main {
+           background-image: url(IMG/salão2.png);
+           padding: 30px 0;
+           background-position: center;
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+       }
+       
+       .main_cta {
+           width: 100%;
+           margin: 60px 0;
+           text-align: center;
+       }
+       
+       .main_cta h2 {
+           color: #fff;
+           font-size: 30px;
+       }
+       .main_cta p {
+            color: #fff;
+            font-size: 19px;
+            margin: 10px 0;
+        }
+       /*Galerry*/
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            justify-content: center;
+            -webkit-overflow-scrolling: touch;
+            /* Rolagem suave para dispositivos móveis */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #fff;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item:last-child {
+            margin-right: 0;
+        }
+
+        /*imagem ampliada */
+        .gallery-item.enlarged {
+            transform: scale(1.1);
+            z-index: 1;
+        }
+
+        /*rolagem horizontal */
+        .gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .gallery::-webkit-scrollbar-thumb {
+            background-color: #333;
+            border-radius: 4px;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        #lightboxImage {
+            max-width: 80%;
+            max-height: 80%;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /*setas de navegação */
+        .arrow-button {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        #prevButton {
+            left: 10px;
+            color: #1c1b1b;
+        }
+
+        #nextButton {
+            right: 10px;
+            color: #1c1b1b;
+        }
+        /**
+        footer
+        **/
+
+        footer {
+            background-color: #1c1b1b;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .logo img {
+            margin-bottom: 30px;
+            width: 180px;
+        }
+
+        .itens a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .itens i {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .itens {
+            margin: 0 20px;
+            text-align: left;
+        }
+
+        .itens h2 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .itens p {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .itens a i.fa-instagram {
+            background: linear-gradient(to right, #ffffff, #cc00ff, #ffa200);
+        }
+
+        .itens a i.fa-whatsapp {
+            color: #25D366;
+        }
+
+        .itens a:hover {
+            color: #ababab;
+        }
+
+        .copyright {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+      /*Responsivel*/
+     @media (max-width: 768px) {
+        .center {
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo  img{
+            margin-bottom: 20px;
+        }
+        .menu {
+            width: 100%;
+            text-align: center;
+        }
+        .menu a {
+            margin-right: 10px;
+        }
+   
+
+        .gallery {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-item {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+         /*footer*/
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+        .itens {
+            flex: 1 1 100%;
+            margin: 10px 0;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header {
+            padding: 10px;
+        }
+        
+        .menu a {
+            font-size: 14px;
+            margin-right: 3px;
+        }
+           
+        .main_cta {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .main_cta h2 {
+            font-size: 24px;
+        }
+        .main_cta p {
+        font-size: 15px;
+        }
+
+        section.main {
+            background-attachment: scroll;
+        }
+
+        .gallery-item {
+            width: 100%;
+        }
+         /* Footer */
+        footer {
+            padding: 30px 20px;
+        }
+        .logo h2 {
+            font-size: 20px;
+        }
+        .itens h2 {
+            font-size: 16px;
+        }
+        .redes-sociais a {
+            font-size: 16px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="center">
+            <div class="logo">
+                <img src="IMG/logo_fr.png" alt="logo">
+            </div>
+            <!--logo-->
+            <div class="menu">
+                <a href="index.html">
+                    Home
+                </a>
+                
+                <a href="servicos.html">
+                    Serviços
+                </a>
+                <a href="time.html">
+                    Nosso time
+                </a>
+                <a href="curso.html">
+                    Cursos
+                </a>
+            </div>
+            <!--menu-->
+
+        </div>
+        <!--center-->
+    </header>
+
+<section class="main">
+    <div class="center">
+        <div class="main_cta">
+            <h2>Espaço</h2>
+            <p>Um lugar onde você se sente bem enquanto cuida de sua beleza!</p>
+
+        </div>
+        <!--main-cta-->
+    </div>
+    <!--center-->
+</section>
+
+<div class="gallery">
+
+    <div class="gallery-item">
+        <img src="IMG/img1.jpeg" alt="Imagem 1">
+    </div>
+    <div class="gallery-item">
+        <img src="IMG/img2.jpeg" alt="Imagem 2">
+    </div>
+    <div class="gallery-item">
+        <img src="IMG/img3.jpeg" alt="Imagem 3">
+    </div>
+    <div class="gallery-item">
+        <img src="IMG/img4" alt="Imagem 4">
+    </div>
+
+</div>
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="IMG/img5.jpeg" alt="Imagem 5">
+    </div>
+    <div class="gallery-item">
+        <img src="IMG/img6.jpeg" alt="Imagem 6">
+    </div>
+    <div class="gallery-item">
+        <img src="IMG/img7.jpeg" alt="Imagem 7">
+    </div>
+    <div class="gallery-item">
+        <img src="IMG/img8.jpeg" alt="Imagem 8">
+    </div>
+</div>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="IMG/img9.jpeg" alt="Imagem 9">
+    </div>
+    <div class="gallery-item">
+        <img src="IMG/img10.jpeg" alt="Imagem 10">
+    </div>
+    <div class="gallery-item">
+        <img src="IMG/img11.png" alt="Imagem 11">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo12.jpg" alt="Imagem 12">
+    </div>
+</div>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="Imagens/photo13.jpg" alt="Imagem 13">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo14.jpg" alt="Imagem 14">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo15.jpg" alt="Imagem 15">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo16.jpg" alt="Imagem 16">
+    </div>
+</div>
+
+<div class="gallery">
+
+    <div class="gallery-item">
+        <img src="Imagens/photo18.jpg" alt="Imagem 18">
+    </div>
+
+    <div class="gallery-item">
+        <img src="Imagens/photo20.jpg" alt="Imagem 20">
+    </div>
+
+    <div class="gallery-item">
+        <img src="Imagens/photo22.jpg" alt="Imagem 22">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo23.jpg" alt="Imagem 23">
+    </div>
+
+</div>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="Imagens/photo24.jpg" alt="Imagem 24">
+    </div>
+
+    <div class="gallery-item">
+        <img src="Imagens/photo25.jpg" alt="Imagem 25">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo26.jpg" alt="Imagem 26">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo27.jpg" alt="Imagem 27">
+    </div>
+
+</div>
+
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="Imagens/photo29.jpg" alt="Imagem 29">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo30.jpg" alt="Imagem 30">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo31.jpg" alt="Imagem 31">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo32.jpg" alt="Imagem 32">
+    </div>
+</div>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="Imagens/photo33.jpg" alt="Imagem 33">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo34.jpg" alt="Imagem 34">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo35.jpg" alt="Imagem 35">
+    </div>
+    <div class="gallery-item">
+        <img src="Imagens/photo36.jpg" alt="Imagem 36">
+    </div>
+</div>
+</div>
+
+<div id="lightbox" class="lightbox">
+    <span id="closeButton" class="close-button">&#10006;</span>
+    <button id="prevButton" class="arrow-button">&#9664;</button>
+    <button id="nextButton" class="arrow-button">&#9654;</button>
+    <img id="lightboxImage" src="" alt="Imagem Ampliada">
+</div>
+<br><br>
+
+<footer>
+    <div class="logo">
+       <img src="IMG/logo_fr.png" alt="logo">
+    </div>
+
+    <br>
+    <div class="itens">
+        <h2>Contato</h2>
+        <a href="https://www.instagram.com/shamasalao_/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+        <br><a href="https://api.whatsapp.com/send?phone=5514997289970&text=Ol%C3%A1,%20vim%20pelo%20site,%20meu%20nome%20%C3%A9:%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seguinte%20procedimento:%20"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+    </div>
+
+    <div class="itens">
+        <h2>Horário de Funcionamento</h2>
+        <p>Ter.a Sex.: 8h - 20h</p>
+        <p>Sábado: 8h - 19h</p>
+    </div>
+
+    <div class="itens">
+        <h2>Localização</h2>
+        <p>Av. Santo Antonio 1179, Marília-SP</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3538582638923!2d-50.93421778561834!3d-23.21859468486071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c2cd62a0d92997%3A0x5369e2db5a1210!2sAv.%20Santo%20Antonio%2C%201179%20-%20Marília%2C%20SP%2C%2017500-001%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1625217158742!5m2!1spt-BR!2sus"
+            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</footer>
+
+<div class="copyright">
+    <p>© 2024 Shamá Beleza e Estética - SALÃO - Todos os direitos reservados.</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Lemon&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="IMG/logo.png">
+    <title>Cursos - Shamá Beleza e Estética</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #fff;
+        }
+        
+        .center {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        header {
+            background-color: #1c1b1b;
+            padding: 10px 0;
+            border-bottom: 1px solid rgb(200, 200, 200);
+        }
+        
+        .logo img {
+            width: 150px;
+            margin-top: 15px;
+        }
+        
+        .menu {
+            width: 80%;
+            text-align: right;
+        }
+        
+        .menu a {
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 15px;
+            margin-right: 10px;
+            transition: 0.3s;
+            margin-top: 25px;
+        }
+        
+        .menu a:hover {
+            color: #666565;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /*
+        section main
+        */
+        
+        section.main {
+            background-image: url(IMG/salão2.png);
+            padding: 30px 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .main_cta {
+            width: 100%;
+            margin: 60px 0;
+            text-align: center;
+        }
+        
+        .main_cta h2 {
+            color: #fff;
+            font-size: 30px;
+        }
+        .main_cta p {
+            color: #fff;
+            font-size: 19px;
+            margin: 10px 0;
+        }
+        
+
+        /* Container*/
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+      
+        /* grade-de-cursos */
+        .grade-de-cursos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+           
+        }
+
+        .curso {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .curso:hover {
+            transform: translateY(-5px);
+        }
+
+        .curso img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .curso h2 {
+            font-size: 18px;
+            color: #1c1b1b;
+            margin-top: 15px;
+        }
+
+        .curso p {
+            font-size: 13px;
+            margin: 15px 0;
+        
+        }
+        .curso button{
+            background-color: #666565;
+            color: white;
+            border: none;
+            padding: 11px 10px;
+            font-size: 13px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .curso a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /**
+        footer
+        **/
+
+        footer {
+            background-color: #1c1b1b;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .logo img {
+            margin-bottom: 30px;
+            width: 180px;
+        }
+
+        .itens a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .itens i {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .itens {
+            margin: 0 20px;
+            text-align: left;
+        }
+
+        .itens h2 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .itens p {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .itens a i.fa-instagram {
+            background: linear-gradient(to right, #ffffff, #cc00ff, #ffa200);
+        }
+
+        .itens a i.fa-whatsapp {
+            color: #25D366;
+        }
+
+        .itens a:hover {
+            color: #ababab;
+        }
+
+        .copyright {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+        .center {
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo  img{
+            margin-bottom: 20px;
+        }
+        .menu {
+            width: 100%;
+            text-align: center;
+        }
+        .menu a {
+            margin-right: 10px;
+        }
+        .grade-de-cursos {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        footer .itens {
+            margin: 20px 0;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        header {
+            padding: 10px;
+        }
+    
+        .menu a {
+            font-size: 13px;
+            margin-right: 5px;
+        }
+        /* section main */
+        .main_cta {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .main_cta h2 {
+            font-size: 24px;
+        }
+        .main_cta p {
+        font-size: 15px;
+        }
+        section.main {
+            background-attachment: scroll;
+        }
+        /*curso*/
+        .curso h2 {
+            font-size: 16px;
+        }
+
+        .curso p {
+            font-size: 12px;
+        }
+        .grade-de-cursos {
+            grid-template-columns: 1fr;
+        }
+        /* Footer */
+        footer {
+            padding: 30px 20px;
+        }
+        .logo h2 {
+            font-size: 20px;
+        }
+        .itens h2 {
+            font-size: 16px;
+        }
+        .redes-sociais a {
+            font-size: 16px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="center">
+            <div class="logo">
+                <img src="IMG/logo_fr.png" alt="logo">
+            </div>
+            <!--logo-->
+            <div class="menu">
+                <a href="index.html">
+                    Home
+                </a>
+                
+                <a href="servicos.html">
+                    Serviços
+                </a>
+                <a href="time.html">
+                    Nosso time
+                </a>
+                <a href="espaco.html">
+                    Espaço
+                </a>
+            </div>
+            <!--menu-->
+
+        </div>
+        <!--center-->
+    </header>
+
+    <section class="main">
+        <div class="center">
+            <div class="main_cta">
+                <h2>Cursos</h2>
+                <p>Invista em seu futuro com nossos cursos especializados!</p>
+
+            </div>
+            <!--main-cta-->
+        </div>
+        <!--center-->
+    </section>
+
+
+
+    <div class="container">
+        <section class="grade-de-cursos">
+            <!-- Curso 1 -->
+            <div class="curso">
+                <img src="IMG/curso_ec.png" alt="Curso de Extensão de Cílios">
+                <h2>Curso de Extensão de Cílios</h2>
+                <p>Aprenda técnicas avançadas de design e modelagem de sobrancelhas para embelezar e realçar o rosto de suas clientes.</p>
+                <button> <a href="#">Mais informações </a></button>
+            </div>
+            <!-- Curso 2 -->
+            <div class="curso">
+                <img src="IMG/curso_sob.png" alt="Curso de Design de Sobrancelhas">
+                <h2>Curso de Design de Sobrancelhas</h2>
+                <p>Aprenda técnicas avançadas de design e modelagem de sobrancelhas para embelezar e realçar o rosto de suas clientes.</p>
+                <button> <a href="#">Mais informações </a></button>
+            </div>
+            
+            <!-- Curso 3 -->
+            <div class="curso">
+                <img src="IMG/curso_aut.png" alt="Curso de Automaquiagem">
+                <h2>Curso de Automaquiagem</h2>
+                <p>Aprenda técnicas avançadas de design e modelagem de sobrancelhas para embelezar e realçar o rosto de suas clientes.</p>
+                <button> <a href="#">Mais informações </a></button>
+            </div>
+            <!-- Curso 4 -->
+            <div class="curso">
+                <img src="IMG/curso_dep.png" alt="Curso de Deepilação">
+                <h2>Curso de Depilação com Cera</h2>
+                <p>Aprenda técnicas avançadas de design e modelagem de sobrancelhas para embelezar e realçar o rosto de suas clientes.</p>
+                <button> <a href="#">Mais informações </a></button>
+            </div>
+        </section>
+    </div>
+    <br><br><br>
+    <footer>
+        <div class="logo">
+           <img src="IMG/logo_fr.png" alt="logo">
+        </div>
+
+        <br>
+        <div class="itens">
+            <h2>Contato</h2>
+            <a href="https://www.instagram.com/shamasalao_/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <br><a href="https://api.whatsapp.com/send?phone=5514997289970&text=Ol%C3%A1,%20vim%20pelo%20site,%20meu%20nome%20%C3%A9:%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seguinte%20procedimento:%20"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+        </div>
+
+        <div class="itens">
+            <h2>Horário de Funcionamento</h2>
+            <p>Ter.a Sex.: 8h - 20h</p>
+            <p>Sábado: 8h - 19h</p>
+        </div>
+
+        <div class="itens">
+            <h2>Localização</h2>
+            <p>Av. Santo Antonio 1179, Marília-SP</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3538582638923!2d-50.93421778561834!3d-23.21859468486071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c2cd62a0d92997%3A0x5369e2db5a1210!2sAv.%20Santo%20Antonio%2C%201179%20-%20Marília%2C%20SP%2C%2017500-001%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1625217158742!5m2!1spt-BR!2sus"
+                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>© 2024 Shamá Beleza e Estética - SALÃO - Todos os direitos reservados.</p>
+    </div>
+
+  
+
+</body>
+</html>

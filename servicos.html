@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Lemon&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="IMG/logo.png">
+    <title>Serviços - Shamá</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #fff;
+        }
+        
+        .center {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        header {
+            background-color: #1c1b1b;
+            padding: 10px 0;
+            border-bottom: 1px solid rgb(200, 200, 200);
+        }
+        
+        .logo img {
+            width: 150px;
+            margin-top: 15px;
+        }
+        
+        .menu {
+            width: 80%;
+            text-align: right;
+        }
+        
+        .menu a {
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 15px;
+            margin-right: 20px;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        
+        .menu a:hover {
+            color: #666565;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /*section main */
+        
+        section.main {
+            background-image: url(IMG/salão2.png);
+            padding: 30px 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .main_cta {
+            width: 100%;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .main_cta h2 {
+            color: #fff;
+            font-size: 30px;
+        }
+        .main_cta p {
+            color: #fff;
+            font-size: 19px;
+            margin: 10px 0;
+        }
+
+
+        /* Section
+        services-home
+        */
+
+        .services-home {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 60px;
+        }
+
+        .home {
+            position: relative;
+            width: 220px;
+            margin: 10px;
+            height: 373px;
+            border-radius: 0px  30px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .home img {
+            width: 100%;
+            height: 300px;
+            display: block;
+            object-fit: cover;
+           
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: left;
+        }
+
+        .overlay p {
+            margin: 5px 0 0;
+            font-size: 18px;
+            color: #ccc;
+         
+        }
+        .overlay a{
+            text-decoration: none;
+            color: #ccc;
+          
+        }
+       
+
+
+        /*footer*/
+        footer {
+        background-color: #1c1b1b;
+        color: #fff;
+        padding: 50px;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        }
+
+        .logo img {
+            margin-bottom: 30px;
+            width: 180px;
+        }
+
+        .itens a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .itens i {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .itens {
+            margin: 0 20px;
+            text-align: left;
+        }
+
+        .itens h2 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .itens p {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .itens a i.fa-instagram {
+            background: linear-gradient(to right, #ffffff, #cc00ff, #ffa200);
+        }
+
+        .itens a i.fa-whatsapp {
+            color: #25D366;
+        }
+
+        .itens a:hover {
+            color: #ababab;
+        }
+
+        .copyright {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsivel */
+     
+        @media (max-width: 768px) {
+            /*Header*/
+            .center {
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo {
+                margin-bottom: 20px;
+            }
+            .menu {
+                width: 100%;
+                text-align: center;
+            }
+            .menu a {
+                margin-right: 10px;
+            }
+
+            /*footer*/
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .itens {
+                flex: 1 1 100%;
+                margin: 10px 0;
+                text-align: center;
+            }
+            iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+
+            @media screen and (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+            .menu a {
+                font-size: 13px;
+                margin-right: 5px;
+            }
+
+            /* section main */
+            .main_cta {
+                margin: 30px 0;
+                text-align: center;
+            }
+            .main_cta h2 {
+                font-size: 24px;
+            }
+            .main_cta p {
+            font-size: 15px;
+            }
+            section.main {
+                background-attachment: scroll;
+            }
+            
+            /* Footer */
+            footer {
+                padding: 30px 20px;
+            }
+            .logo h2 {
+                font-size: 20px;
+            }
+            .itens h2 {
+                font-size: 16px;
+            }
+            .redes-sociais a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="center">
+            <div class="logo">
+                <img src="IMG/logo_fr.png" alt="logo">
+            </div>
+            <!--logo-->
+            <div class="menu">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="time.html">
+                    Nosso Time
+                </a>
+                <a href="curso.html">
+                    Cursos
+                </a>
+                <a href="espaco.html">
+                    Espaço
+                </a>
+            </div>
+            <!--menu-->
+
+        </div>
+        <!--center-->
+    </header>
+
+    <section class="main">
+        <div class="center">
+            <div class="main_cta">
+                <h2>Serviços</h2>
+                <p>Oferecemos serviços personalizados para você!</p>
+
+            </div>
+            <!--main-cta-->
+        </div>
+        <!--center-->
+    </section>
+
+    <section class="services-home">
+        <div class="home">
+            <img src="IMG/botox.jpg" alt="1">
+            <div class="overlay">
+                <a href="pages/ser_botox.html"><p>Botox</p></a>
+            </div>
+
+        </div>
+
+        <div class="home">
+            <img src="IMG/plabial.jpeg" alt="2">
+            <div class="overlay">
+                <a href="pages/ser_preen.html"><p>Preenchimento</p></a>
+            </div>
+
+        </div>
+
+        <div class="home">
+            <img src="IMG/peim.png" alt="3">
+            <div class="overlay">
+                <a href="pages/ser_peim.html"><p>PEIM</p></a>
+            </div>
+
+        </div>
+        <div class="home">
+            <img src="IMG/laser.jpeg" alt="4">
+            <div class="overlay">
+               <a href="pages/ser_laser.html"><p>Laser</p></a>
+            </div>
+
+        </div>
+       
+    </section>
+
+    <section class="services-home">
+        <div class="home">
+            <img src="IMG/sobrancelha.jpeg" alt="1">
+            <div class="overlay">
+               <a href="pages/ser_sob.html"><p>Sobrancelhas</p></a>
+            </div>
+
+        </div>
+        <div class="home">
+            <img src="IMG/cilios.png" alt="4">
+            <div class="overlay">
+                <a href="pages/ser_cilios.html"><p> Extensão de Cílios </p></a>
+            </div>
+        </div>
+
+        <div class="home">
+            <img src="IMG/microl.png" alt="3">
+            <div class="overlay">
+               <a href="pages/ser_microl.html"><p>Micropiguimentação</p></a>
+            </div>
+        </div>
+
+        <div class="home">
+            <img src="IMG/micro.png" alt="2">
+            <div class="overlay">
+                <a href="pages/ser_micro.html"><p>Microblandign</p></a>
+            </div>
+
+        </div>
+     
+    </section>
+    
+    <section class="services-home">
+        <div class="home">
+            <img src="IMG/pente.jpeg" alt="1">
+            <div class="overlay">
+                <a href="pages/ser_cabelo.html"><p>Cabelo</p></a>
+            </div>
+        </div>
+
+        <div class="home">
+            <img src="IMG/make.png" alt="1">
+            <div class="overlay">
+                <a href="pages/ser_make.html"><p>Maquiagem</p></a>
+            </div>
+        </div>
+
+        <div class="home">
+            <img src="IMG/debutante.jpeg" alt="2">
+            <div class="overlay">
+                <a href="pages/ser_debutante.html"><p>Debutante</p></a>
+            </div>
+        </div>
+
+        <div class="home">
+            <img src="IMG/noiva.png" alt="3">
+            <div class="overlay">
+                <a href="pages/ser_noiva.html"><p>Noiva </p></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="services-home">
+        <div class="home">
+            <img src="IMG/depilação.jpg" alt="1">
+            <div class="overlay">
+                <a href="pages/ser_depilacao.html"><p>Depilação</p></a>
+            </div>
+        </div>
+
+        <div class="home">
+            <img src="IMG/massagem.png" alt="3">
+            <div class="overlay">
+               <a href="pages/ser_ecorpo.html"><p>Estética Corporal</p></a>
+            </div>
+        </div>
+
+        <div class="home">
+            <img src="IMG/esteticaf.jpeg" alt="4">
+            <div class="overlay">
+                <a href="pages/ser_efacial.html"><p>Estética Facial </p></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="logo">
+            <img src="IMG/logo_fr.png" alt="logo">
+        </div>
+
+        <br>
+        <div class="itens">
+            <h2>Contato</h2>
+            <a href="https://www.instagram.com/shamasalao_/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <br><a href="https://api.whatsapp.com/send?phone=5514997289970&text=Ol%C3%A1,%20vim%20pelo%20site,%20meu%20nome%20%C3%A9:%0AGostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seguinte%20procedimento:%20"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+        </div>
+
+        <div class="itens">
+            <h2>Horário de Funcionamento</h2>
+            <p>Ter.a Sex.: 8h - 20h</p>
+            <p>Sábado: 8h - 19h</p>
+        </div>
+
+        <div class="itens">
+            <h2>Localização</h2>
+            <p>Av. Santo Antonio 1179, Marília-SP</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3538582638923!2d-50.93421778561834!3d-23.21859468486071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c2cd62a0d92997%3A0x5369e2db5a1210!2sAv.%20Santo%20Antonio%2C%201179%20-%20Marília%2C%20SP%2C%2017500-001%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1625217158742!5m2!1spt-BR!2sus"
+                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>© 2024 Shamá Beleza e Estética - SALÃO - Todos os direitos reservados.</p>
+    </div>
+
+
+
+</body>
+
+</html>

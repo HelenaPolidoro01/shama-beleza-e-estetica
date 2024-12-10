@@ -1,0 +1,573 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.center {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    background-color: #1c1b1b;
+    padding: 2px 0;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.logo img {
+    width: 150px;
+    margin-top: 15px;
+}
+
+
+.menu {
+    width: 80%;
+    text-align: right;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    transition: 0.3s;
+    margin-top: 25px;
+}
+
+.menu a:hover {
+    color: #666565;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/*
+section main
+*/
+
+section.main {
+    background-image: url(IMG/salao.png);
+    padding: 100px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main_cta {
+    width: 100%;
+    margin: 60px 0;
+    text-align: left;
+}
+
+.main_cta h2 {
+    color: #fff;
+    font-size: 40px;
+}
+
+.main_cta p {
+    color: #fff;
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+/*
+section salao
+*/
+
+section.salao {
+    padding: 100px 0;
+    background-position: center;
+    text-align: center;
+}
+
+.salao_ap {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.salao_ap img {
+    width: 500px;
+    border-radius: 5px;
+    float: right;
+}
+
+.salao_ap h2 {
+    color: #1c1b1b;
+    font-size: 35px;
+}
+
+.salao_ap p {
+    color: #1c1b1b;
+    font-size: 19px;
+    margin: 10px 0;
+    width: 50%;
+    text-align: justify;
+}
+
+
+/**section
+services-home
+**/
+
+.services-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px;
+}
+
+.home {
+    position: relative;
+    width: 220px;
+    margin: 2px;
+    height: 400px;
+    border-radius: 5px 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #333;
+    padding: 20px;
+    text-align: left;
+}
+
+.overlay p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    color: #ccc;
+}
+.overlay a{
+    text-decoration: none;
+    color: #ccc;
+  
+}
+
+
+/**services-home_noivas **/
+
+.services-home_noivas {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.noiva-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.noiva_r {
+    display: none;
+}
+
+
+/**section
+servicos
+**/
+
+.container_s {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container_s h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+section.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+
+.servicos-itens {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.servicos-itens:hover{
+    transform: translateY(-5px);
+}
+
+.imagem-servico {
+    height: 150px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.imagem-servico img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.servicos-itens h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.servicos-itens a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.servicos-itens p {
+    font-size: 16px;
+    margin: 10px;
+}
+
+
+/**section
+producoes
+**/
+
+section.producoes {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;0
+    margin-top: 40px;
+}
+
+.producoes h2 {
+    font-size: 30px;
+    font-family: "Shadows Into Light Two", sans-serif;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.producoes p {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.producoes-itens {
+    width: 20%;
+    text-align: center;
+}
+
+.producoes-itens img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.producoes-itens:hover img {
+    transform: translateY(-5px);
+}
+
+
+/**section
+potifolio
+**/
+
+section.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 60px;
+}
+
+section.portfolio h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-item {
+    width: calc(20% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/**
+footer
+**/
+
+footer {
+    background-color: #1c1b1b;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo img {
+    margin-bottom: 30px;
+    width: 180px;
+}
+
+.itens a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.itens i {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.itens {
+    margin: 0 20px;
+    text-align: left;
+}
+
+.itens h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.itens p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.itens a i.fa-instagram {
+    background: linear-gradient(to right, #ffffff, #cc00ff, #ffa200);
+}
+
+.itens a i.fa-whatsapp {
+    color: #25D366;
+}
+
+.itens a:hover {
+    color: #ababab;
+}
+
+.copyright {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    /*Header*/
+    .center {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo  img{
+        margin-bottom: 20px;
+    }
+    .menu {
+        width: 100%;
+        text-align: center;
+    }
+    .menu a {
+        margin-right: 10px;
+    }
+   
+    /* Section Salao */
+    .salao_ap {
+        width: 90%;
+    }
+    .salao_ap img {
+        max-width: 100%;
+    }
+    .salao_ap p {
+        width: 100%;
+        font-size: 16px;
+    }
+    .services-home_cta h2 {
+        font-size: 32px;
+        margin-top: -50px;
+    }
+    .services-home_cta p {
+        font-size: 16px;
+    }
+    .producoes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .producoes-itens {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    .services-home_noivas {
+        padding: 10px;
+    
+    }
+    .noiva-img{
+        display: none;
+    }
+    .noiva_r{
+        width: 100%;
+        display: block;
+    }
+
+    section.servicos {
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px; 
+    }
+    .servicos-itens {
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .imagem-servico {
+        height: 150px; 
+    }
+
+    .servicos-itens h3 {
+        font-size: 13px;
+     
+    }
+
+    .servicos-itens p {
+        display: none;
+    }
+
+    /*portfolio*/
+    .portfolio-item {
+        width: calc(50% - 20px);
+    }
+    /*footer*/
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .itens {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .servicos-itens {
+        width: calc(100% - 20px);
+       
+    }
+    
+    .noiva_r{
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /*Header menu */
+    header {
+        padding: 10px;
+    }
+   
+    .menu a {
+        font-size: 13px;
+        margin-right: 5px;
+    }
+    /* section main */
+    .main_cta {
+        margin: 30px 0;
+        text-align: center;
+    }
+    .main_cta h2 {
+        font-size: 24px;
+    }
+    .main_cta p {
+        font-size: 15px;
+    }
+    section.main {
+        padding: 50px 0;
+        background-attachment: scroll;
+    }
+
+    section.servicos {
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px; 
+    }
+
+    .imagem-servico {
+        height: 120px; 
+    }
+
+    .servicos-itens h3 {
+        font-size: 14px; 
+    }
+
+    .servicos-itens p {
+        font-size: 12px; 
+    }
+    /* Footer */
+    footer {
+        padding: 30px 20px;
+    }
+    .logo h2 {
+        font-size: 20px;
+    }
+    .itens h2 {
+        font-size: 16px;
+    }
+    .redes-sociais a {
+        font-size: 16px;
+    }
+}
