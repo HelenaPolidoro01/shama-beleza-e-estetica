@@ -235,10 +235,16 @@
         .menu a {
             margin-right: 10px;
         }
-        .grade-de-cursos {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          .grade-de-cursos {
+        grid-template-columns: repeat(2, 1fr); /* Dois cards por linha */
+        gap: 15px; 
         }
 
+        .curso img {
+        height: 150px; 
+        }
+
+        /*footer*/
         footer {
             flex-direction: column;
             text-align: center;
@@ -274,15 +280,22 @@
         }
         /*curso*/
         .curso h2 {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .curso p {
-            font-size: 12px;
+            font-size: 11px;
         }
         .grade-de-cursos {
             grid-template-columns: 1fr;
         }
+        .curso img {
+        height: 120px; 
+        }
+        .curso button {
+        font-size: 11px; 
+        }
+        
         /* Footer */
         footer {
             padding: 30px 20px;
